@@ -26,10 +26,20 @@
 // console.log (discount)
 
 
-import { Car } from "./Car";
+// import { Car } from "./Car";
 
-const myCar = new Car("TOYOTA",20)
-myCar.accelerate(30) // ความเร็วปัจจุบัน 50
-myCar.brake(10)
+// const myCar = new Car("TOYOTA",20)
+// myCar.accelerate(30) // ความเร็วปัจจุบัน 50
+// myCar.brake(10)
 
-console.log(myCar)
+// console.log(myCar)
+
+import { UserAccount } from "./UserAccount";
+import { AdminAccount } from "./AdminAccount";
+const user = new UserAccount("nabnoey", "123456", "nabnoy@gmail.com");
+const admin = new AdminAccount("admin","1234","admin@gmail.com")
+const changePas = user.changePassword("123456","112233")
+console.log("เปลี่ยนรหัสผ่าน: ", changePas);
+
+console.log(user)
+console.log(admin)

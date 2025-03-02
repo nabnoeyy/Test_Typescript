@@ -21,8 +21,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // console.log ("ราคาหลังหักส่วนลด: " ,discount.getDiscountPrice())
 // console.log(product)
 // console.log (discount)
-const Car_1 = require("./Car");
-const myCar = new Car_1.Car("TOYOTA", 20);
-myCar.accelerate(30); // ความเร็วปัจจุบัน 50
-myCar.brake(10);
-console.log(myCar);
+// import { Car } from "./Car";
+// const myCar = new Car("TOYOTA",20)
+// myCar.accelerate(30) // ความเร็วปัจจุบัน 50
+// myCar.brake(10)
+// console.log(myCar)
+const UserAccount_1 = require("./UserAccount");
+const AdminAccount_1 = require("./AdminAccount");
+const user = new UserAccount_1.UserAccount("nabnoey", "123456", "nabnoy@gmail.com");
+const admin = new AdminAccount_1.AdminAccount("admin", "1234", "admin@gmail.com");
+const changePas = user.changePassword("123456", "112233");
+console.log("เปลี่ยนรหัสผ่าน: ", changePas);
+console.log(user);
+console.log(admin);
